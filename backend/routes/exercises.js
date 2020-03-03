@@ -4,6 +4,8 @@ let Exercise = require('../models/excercise.model');
 
 
 
+
+// HOME PAGE SHOW
 router.route('/').get((req, res, next) => {
     Exercise.find()
         .then(exercise => { res.json(exercise) })
@@ -13,6 +15,7 @@ router.route('/').get((req, res, next) => {
 
 
 
+// ADD DATA TO THE DATABASE
 router.route('/add').post((req, res, next) => {
     const username = req.body.username;
     const description = req.body.description;
@@ -27,17 +30,28 @@ router.route('/add').post((req, res, next) => {
 
 
 
+
+// SHOW SPECEFIC ITEM
 router.route('/:id').get((req, res, next) => {
     Exercise.findById(req.params.id)
         .then(exercise => { res.json(exercise) })
         .catch(err => { res.status(400).json("Error: " + err) });
 });
 
+
+
+
+// DELETE A SPECEFIC ITEM
 router.route('/:id').delete((req, res, next) => {
     Exercise.findByIdAndDelete(req.params.id)
         .then(() => { res.json("exercise deleted") })
         .catch(err => { res.status(400).json("Error: " + err) });
 });
+
+
+
+
+// UPDATE A SPECEFIC ITEM
 router.route('/update/:id').post((req, res, next) => {
     Exercise.findById(req.params.id)
         .then((exercise) => {
