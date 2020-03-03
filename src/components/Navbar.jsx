@@ -5,7 +5,7 @@ import { Menu, Container } from 'semantic-ui-react';
 class Navbar extends Component {
     render() {
         return (
-            <Menu color="inverted purple">
+            <Menu inverted stackable color="black">
                 <Container>
                     <Menu.Item>
                         <Link to="/">Exercise Tracker</Link>
