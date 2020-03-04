@@ -14,6 +14,14 @@
 
     ![Post request api](screenshots/2.jpg)
 
+    ![Post request api](screenshots/3.jpg)
+
+    ![Post request api](screenshots/4.jpg)
+
+    ![Post request api](screenshots/5.jpg)
+
+    ![Post request api](screenshots/6.jpg)
+
 <hr>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
